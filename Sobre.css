@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&display=swap');
+
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Playwrite AU QLD', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    -ms-flex-align: center;
+    border: solid 2px black;
+    border-radius: 10px;
+
+}
+h2{
+    animation-name: sticker;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    font-family: 'Playwrite AU QLD', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:#e3f2fd;
+    position: sticky;
+    display: block;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    margin: 0px;
+    z-index: 10;
+}
+p{
+    font-family: 'Playwrite AU QLD', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+header, article, footer{   
+    padding: 20px;              
+    background-color: #fffde7;
+    width: 80%;                  
+    margin: 30px auto;           
+    border-radius: 10px;        
+}
+
+body {
+    background-color: black;
+    animation: anim1 6s forwards;
+    animation-delay: 4s;
+}
+header {
+    background-color: black;
+    animation: headerAnim 6s forwards;
+    animation-delay: 4s;
+}
+article {
+    background-color: black;
+    animation: articleAnim 6s forwards;
+    animation-delay: 4s;
+}
+.anim-img {
+    animation: moveimg 3s forwards;
+    background-attachment: fixed;
+    position: fixed;
+    position: center;
+    margin-left: 25%;
+    margin-right: 20%;
+}
+
+.imgcursor:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+img{
+    animation: imgblack 7s forwards;
+}
+
+div{
+    text-align: center;
+}
+
+@keyframes anim1 {
+    0% { 
+        background-color: black;
+    }
+    100% { 
+        background-color: #b2ebf2;
+    }
+}
+@keyframes moveimg {
+    0% {
+        filter: brightness(1.5);
+        transform: translateY(0);     
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-500px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px);
+        transform:scale(50%);
+        opacity: 0;
+    }
+}
+@keyframes imgblack {
+    0% {
+        filter: brightness(0); /* Imagen completamente negra */
+    }
+    60% {
+        filter: brightness(0); /* Mantener negra hasta el 60% (6s de 10s) */
+    }
+    100% {
+        filter: brightness(1); /* Imagen normal */
+    }
+}
+@keyframes headerAnim {
+    0% { 
+        background-color: black;
+    }
+
+    100% { 
+        background-color: #e3f2fd;
+        border: 2px solid #1a237e;  
+    }
+}
+@keyframes articleAnim {
+    0% { background-color: black; }
+    100% { background-color: #e3f2fd;
+        border: 2px solid #1a237e;}
+}
+@keyframes sticker{
+    0% {
+         background-color: black;
+    }
+    40% {
+         background-color: black;
+    }
+    100% { 
+        background-color: #e3f2fd;
+    }
+}
